@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Helping With Flags - Clubs</title>
+        <link rel="shortcut icon" type="image/png" href="images/header-logo.png">
+        <link href="fonts/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="styles/plugins/waves.css" rel="stylesheet">
+        <link href="styles/plugins/perfect-scrollbar.css" rel="stylesheet">
+        <link href="styles/plugins/select2.css" rel="stylesheet">
+        <link href="styles/clubs-index.css" rel="stylesheet">
+        <link href="styles/bootstrap.min.css" rel="stylesheet">
+        <link href="styles/main.min.css" rel="stylesheet">
+        <link href="styles/custom.css" rel="stylesheet">
+        <link href="styles/responsive.css" rel="stylesheet">
+        <link href="club-list.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    </head>
+    <body id="app" class="app off-canvas nav-expand">
+        <header class="site-head" id="site-head">
+            <ul class="list-unstyled left-elems mt0">
+                <li><a href="javascript:;" class="nav-trigger ion ion-drag"></a></li>
+                <li class="header-menu-logo hidden-xs">
+                    <a href="club-list.html" class="site-logo text-uppercase slide-text">
+                        <div class="badge_logo">
+                            <img src="images/badge.svg" alt="">
+                            <h6>#1 Flag program Management <span>Software in America</span></h6>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-unstyled left-elems center hidden-xs mt0">
+                <li class="profile-drop dropdown desktop-email">
+                    <div class="helping-version-box">
+                        <a style="color: #fff;" href="javascript:;"><img src="images/header-logo.png" width="35px" height="35px"><span class="head-text">www.helpingwithflags.com | </span></a>
+                        <a style="color: #fff;" href="javascript:;">&nbsp;Version 1</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-unstyled right-elems menu-fix-width header-right mt0">
+                <li class="profile-drop dropdown pr20">
+                    <svg class="header-shape-icon" width="360" height="37" viewBox="0 0 360 37" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M361.875 -0.492433L-11.8039 -0.492549C-20.016 -0.492552 -26.6733 6.16475 -26.6733 14.3769C-26.6733 22.5891 -20.0161 29.2464 -11.8039 29.2464H149.972C169.697 29.2464 189.282 25.9429 207.915 19.4729L232.23 11.03C242.766 7.37166 253.84 5.50374 264.993 5.50377L361.875 5.50397C363.531 5.50397 364.874 4.16163 364.874 2.50577C364.874 0.849908 363.531 -0.492432 361.875 -0.492433Z" fill="#3f51b5"/></svg>
+                    <button class="btn btn-chatbot btn-help-header" type="button">
+                        <img class="chatbot-icon" src="images/helpdesk.png" alt="">
+                        <span class="d-flex flex-column fs-18"><span>Help</span></span>
+                    </button>
+                </li>
+                <li class="profile-drop dropdown">
+                    <a href="javascript:;" data-toggle="dropdown">
+                        <img src="images/user-male.png" class="img-circle"/>
+                        <span class="profile-name">SuperUser</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right profile-dropdown-menu">
+                        <li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Profile</a></li>
+                        <li><a href="javascript:;"><span class="ion ion-person">&nbsp;&nbsp;</span>Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html"><span class="ion ion-power">&nbsp;&nbsp;</span>Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+
+        <div class="main-container clearfix">
+            <aside class="nav-wrap nav-expand" id="site-nav" data-perfect-scrollbar>
+                <div class="nav-head">
+                    <a href="club-list.html" class="site-logo text-uppercase slide-text"><img alt="logo" class="slide-logo sidebar-logo" src="images/logo-white.png"></a>
+                </div>
+                <nav class="site-nav clearfix" role="navigation">
+                    <ul class="list-unstyled clearfix nav-list mb15">
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/group.svg"><img class="sidebar-icon-hover" src="images/nav_icon/group.svg"></div><div class="content"><span class="text">Groups</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/club.svg"><img class="sidebar-icon-hover" src="images/nav_icon/club.svg"></div><div class="content"><span class="text">Clubs</span><i class="arrow ion-chevron-left"></i></div></div></a><ul class="inner-drop list-unstyled"><li><a href="javascript:;">Manage Clubs</a></li><li><a href="javascript:;">Add Club</a></li><li><a href="javascript:;">Subscription List</a></li></ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/subscribers.svg"><img class="sidebar-icon-hover" src="images/nav_icon/subscribers.svg"></div><div class="content"><span class="text">Customers</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/email.svg"><img class="sidebar-icon-hover" src="images/nav_icon/email.svg"></div><div class="content"><span class="text">Schedule Reminder</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/invoice.svg"><img class="sidebar-icon-hover" src="images/nav_icon/invoice.svg"></div><div class="content"><span class="text">Invoicing</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/club.svg"><img class="sidebar-icon-hover" src="images/nav_icon/club.svg"></div><div class="content"><span class="text">HWF Wallet</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/setting.svg"><img class="sidebar-icon-hover" src="images/nav_icon/setting.svg"></div><div class="content"><span class="text">Settings</span><i class="arrow ion-chevron-left"></i></div></div></a><ul class="inner-drop list-unstyled"><li><a href="javascript:;">Manage Settings</a></li><li><a href="javascript:;">Manage Pricing</a></li><li><a href="javascript:;">Mobile App Versions</a></li><li><a href="javascript:;">Software Updates</a></li><li><a href="javascript:;">Generate Holiday</a></li><li><a href="javascript:;">Payment Failure Email</a></li></ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/to-do.svg"><img class="sidebar-icon-hover" src="images/nav_icon/to-do.svg"></div><div class="content"><span class="text">User Activity Log</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/email.svg"><img class="sidebar-icon-hover" src="images/nav_icon/email.svg"></div><div class="content"><span class="text">Abstract Email API</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><i class="fa fa-history" aria-hidden="true"></i></div><div class="content"><span class="text">Global Email History</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><i class="fa fa-comment-o" aria-hidden="true"></i></div><div class="content"><span class="text">Global SMS History</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/to-do.svg"><img class="sidebar-icon-hover" src="images/nav_icon/to-do.svg"></div><div class="content"><span class="text">Onboarding</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/volunteer_admin.svg"><img class="sidebar-icon-hover" src="images/nav_icon/volunteer_admin.svg"></div><div class="content"><span class="text">Super Users</span></div></div></a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="main-title"><div class="sidebar-img"><div class="main-img"><img class="sidebar-icon" src="images/nav_icon/logs.svg"><img class="sidebar-icon-hover" src="images/nav_icon/logs.svg"></div><div class="content"><span class="text">Server Logs</span></div></div></a>
+                </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <div class="content-container" id="content">
+                <div class="page page-forms-elements">
+                    <div class="page-wrap">
+                        <div class="clubs_page">
+                            <div class="row"><div class="col-lg-12">
+                                <div class="panel panel-default panel-hovered panel-stacked mb30">
+                                    <div class="panel-body">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-4">
+                                            <h1 class="title with-icon d-flex align-items-center gap-3">
+                                                <img src="images/nav_icon/club.svg" class="club-title-icon" alt="">
+                                                <span>Clubs (<span class="text-info">83</span>)</span>
+                                            </h1>
+                                            <div class="d-flex align-items-center flex-wrap gap-3">
+                                                <h4 class="total_club_flag with-icon m-0">Total Club Flags:(<span class="text-info">12,480</span>)</h4>
+                                                <div class="activity_log_btn m-0"><a href="javascript:;" class="btn btn-primary"><i class="fa fa-clock-o"></i> Activity Log</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <hr class="club-divider" />
+
+                                        <div class="club-card-wrapper">
+                                            <h4 class="club-card-heading"><i class="fa fa-star mb0" aria-hidden="true"></i> Favourite Clubs</h4>
+                                            <div class="row row-gap-3">
+                                <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="club-card">
+                                        <h5 class="club-card-title">Allen Kiwanis</h5>
+                                        <h5 class="club-card-type">Club Type: ClubYearly</h5>
+                                        <ul class="club-info-list">
+                                            <li class="club-info"><i class="fa fa-user" aria-hidden="true"></i><p>Manager: Shreyansh Bhimani</p></li>
+                                            <li class="club-info"><i class="fa fa-map-marker" aria-hidden="true"></i><p>State: TX</p></li>
+                                            <li class="club-info"><i class="fa fa-flag" aria-hidden="true"></i><p>Total Flags: 2330</p></li>
+                                        </ul>
+                                        <div class="club-card-action-wrapper d-flex align-items-center justify-content-end gap-3">
+                                            <a data-toggle="tooltip" title="Switch to Allen Kiwanis" class="btn switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="club-card">
+                                        <h5 class="club-card-title">Fairview Rotary</h5>
+                                        <h5 class="club-card-type">Club Type: ClubYearly</h5>
+                                        <ul class="club-info-list">
+                                            <li class="club-info"><i class="fa fa-user" aria-hidden="true"></i><p>Manager: Charlie Henkle</p></li>
+                                            <li class="club-info"><i class="fa fa-map-marker" aria-hidden="true"></i><p>State: TX</p></li>
+                                            <li class="club-info"><i class="fa fa-flag" aria-hidden="true"></i><p>Total Flags: 160</p></li>
+                                        </ul>
+                                        <div class="club-card-action-wrapper d-flex align-items-center justify-content-end gap-3">
+                                            <a data-toggle="tooltip" title="Switch to Fairview Rotary" class="btn switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="club-card">
+                                        <h5 class="club-card-title">Friends Of Fairview</h5>
+                                        <h5 class="club-card-type">Club Type: ClubYearly</h5>
+                                        <ul class="club-info-list">
+                                            <li class="club-info"><i class="fa fa-user" aria-hidden="true"></i><p>Manager: William Baxter</p></li>
+                                            <li class="club-info"><i class="fa fa-map-marker" aria-hidden="true"></i><p>State: TX</p></li>
+                                            <li class="club-info"><i class="fa fa-flag" aria-hidden="true"></i><p>Total Flags: 2683</p></li>
+                                        </ul>
+                                        <div class="club-card-action-wrapper d-flex align-items-center justify-content-end gap-3">
+                                            <a data-toggle="tooltip" title="Switch to Friends Of Fairview" class="btn switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="club-card">
+                                        <h5 class="club-card-title">Plano Metro Rotary Club</h5>
+                                        <h5 class="club-card-type">Club Type: SubscriberYearly</h5>
+                                        <ul class="club-info-list">
+                                            <li class="club-info"><i class="fa fa-user" aria-hidden="true"></i><p>Manager: Shelley Strickland</p></li>
+                                            <li class="club-info"><i class="fa fa-map-marker" aria-hidden="true"></i><p>State: TX</p></li>
+                                            <li class="club-info"><i class="fa fa-flag" aria-hidden="true"></i><p>Total Flags: 630</p></li>
+                                        </ul>
+                                        <div class="club-card-action-wrapper d-flex align-items-center justify-content-end gap-3">
+                                            <a data-toggle="tooltip" title="Switch to Plano Metro Rotary Club" class="btn switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                    <div class="club-card">
+                                        <h5 class="club-card-title">Prosper Rotary</h5>
+                                        <h5 class="club-card-type">Club Type: ClubYearly</h5>
+                                        <ul class="club-info-list">
+                                            <li class="club-info"><i class="fa fa-user" aria-hidden="true"></i><p>Manager: Ed Reames</p></li>
+                                            <li class="club-info"><i class="fa fa-map-marker" aria-hidden="true"></i><p>State: TX</p></li>
+                                            <li class="club-info"><i class="fa fa-flag" aria-hidden="true"></i><p>Total Flags: 1850</p></li>
+                                        </ul>
+                                        <div class="club-card-action-wrapper d-flex align-items-center justify-content-end gap-3">
+                                            <a data-toggle="tooltip" title="Switch to Prosper Rotary" class="btn switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="club-divider" />
+
+                                        <div class="controls-above-table">
+                                            <form action="javascript:;" id="form-inline" class="form-inline">
+                                                <div class="row">
+                                                    <div class="col-lg-11 col-md-12"><div class="row">
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form_group"><input type="text" name="club_name" class="form-control club-filter-input" placeholder="Club Name"></div></div>
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form_group"><input type="text" name="club_state" class="form-control club-filter-input" placeholder="Club State"></div></div>
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form_group"><input type="text" name="club_manager" class="form-control club-filter-input" placeholder="Club Manager"></div></div>
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form_group">
+                                                            <select name="subscription_type" id="subscription_type" class="select2">
+                                                                <option value="" selected>Subscription Type</option><option value="club_yearly">Club Yearly</option><option value="subscriber_yearly">Customer Yearly</option>
+                                                            </select></div></div>
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form_group">
+                                                            <select name="gateway_account" id="gateway_account" class="select2">
+                                                                <option value="" selected>Payment Gateway</option><option value="authorize.net">Authorize.net</option><option value="paypal">PayPal</option><option value="squareup">SquareUp</option><option value="stripe">Stripe</option>
+                                                            </select></div></div>
+                                                        <div class="col-xs-12 col-sm-6 col-lg-3 col-md-4"><div class="form-group">
+                                                            <button type="submit" id="search_button" class="btn btn-info ext_btn">Apply Filters</button>
+                                                            <a href="javascript:;" class="btn btn-link ext_btn">Reset</a>
+                                                        </div></div>
+                                                    </div></div>
+                                                    <div class="col-lg-1 col-md-12 text-right"><a class="btn btn-primary waves-effect" href="javascript:;"> Add</a></div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="table-responsive table-bordered common_table">
+                                            <table class="table table-lightborder">
+                                                <thead><tr>
+                                                    <th class="text-left whitespace-nowrap">
+                                    <a>Club Name</a>
+                                    <div class="club-sort"><a href="javascript:;"><i class="fa fa-caret-up"></i></a><a href="javascript:;"><i class="fa fa-caret-down"></i></a></div>
+                                </th>
+                                                    <th class="text-center whitespace-nowrap">
+                                    <a>Creation Date</a>
+                                    <div class="club-sort"><a href="javascript:;"><i class="fa fa-caret-up"></i></a><a href="javascript:;"><i class="fa fa-caret-down"></i></a></div>
+                                </th>
+                                                    <th class="text-left whitespace-nowrap">
+                                    <a>Manager</a>
+                                    <div class="club-sort"><a href="javascript:;"><i class="fa fa-caret-up"></i></a><a href="javascript:;"><i class="fa fa-caret-down"></i></a></div>
+                                </th>
+                                                    <th class="text-center whitespace-nowrap">
+                                    <a>State</a>
+                                    <div class="club-sort"><a href="javascript:;"><i class="fa fa-caret-up"></i></a><a href="javascript:;"><i class="fa fa-caret-down"></i></a></div>
+                                </th>
+                                                    <th class="text-center whitespace-nowrap">
+                                    <a>Payment Mode</a>
+                                    <div class="club-sort"><a href="javascript:;"><i class="fa fa-caret-up"></i></a><a href="javascript:;"><i class="fa fa-caret-down"></i></a></div>
+                                </th>
+                                                    <th class="text-center"><a>Total <br> Flags</a></th>
+                                                    <th class="text-center"><a>Subscription <br> Status</a></th>
+                                                    <th class="text-center"><a>Account <br> Suspended</a></th>
+                                                    <th class="text-center"><a>Action</a></th>
+                                                </tr></thead>
+                                                <tbody>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">Eleanor Faulkner</a>
+                                        <br>Club Type: <span class="text text-muted">ClubYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">veritatis-perspiciat</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">10-23-2026</td>
+                                    <td class="text-left"></td>
+                                    <td class="text-center">N/A</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Active Subscription" class="toggle_status text-red" href="javascript:;">Inactive</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_1" class="custom-control-input" name="account_suspended_1">
+                                            <label class="custom-control-label" for="account_suspended_1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">Carol Collier</a>
+                                        <br>Club Type: <span class="text text-muted">SubscriberYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">carol</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">10-22-2026</td>
+                                    <td class="text-left">Ferris Maxwell</td>
+                                    <td class="text-center">GJ</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Active Subscription" class="toggle_status text-red" href="javascript:;">Inactive</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_2" class="custom-control-input" name="account_suspended_2">
+                                            <label class="custom-control-label" for="account_suspended_2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">Lana Thomas</a>
+                                        <br>Club Type: <span class="text text-muted">ClubYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">Qui debitis officia</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">02-11-2026</td>
+                                    <td class="text-left">Aretha Sears</td>
+                                    <td class="text-center">Architecto labore qu</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Active Subscription" class="toggle_status text-red" href="javascript:;">Inactive</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_3" class="custom-control-input" name="account_suspended_3">
+                                            <label class="custom-control-label" for="account_suspended_3"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">Rotary Club of Kirksville</a>
+                                        <br>Club Type: <span class="text text-muted">ClubYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">rotary-club-of-kirksville</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">01-08-2026</td>
+                                    <td class="text-left">Shrey Patel</td>
+                                    <td class="text-center">GJ</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Active Subscription" class="toggle_status text-red" href="javascript:;">Inactive</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_4" class="custom-control-input" name="account_suspended_4">
+                                            <label class="custom-control-label" for="account_suspended_4"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">A Test Club</a>
+                                        <br>Club Type: <span class="text text-muted">ClubYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">test club</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">05-20-2025</td>
+                                    <td class="text-left">john doe</td>
+                                    <td class="text-center">rx</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Inactive Subscription" class="toggle_status text-green" href="javascript:;">Activated</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_5" class="custom-control-input" name="account_suspended_5" checked>
+                                            <label class="custom-control-label" for="account_suspended_5"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+                                            <a data-toggle="tooltip" title="Switch to A Test Club" class="btn-sm switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">ROW</a>
+                                        <br>Club Type: <span class="text text-muted">ClubYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">RE232233</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">03-19-2025</td>
+                                    <td class="text-left">ROY R</td>
+                                    <td class="text-center">TX</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Inactive Subscription" class="toggle_status text-green" href="javascript:;">Activated</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_6" class="custom-control-input" name="account_suspended_6" checked>
+                                            <label class="custom-control-label" for="account_suspended_6"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+                                            <a data-toggle="tooltip" title="Switch to ROW" class="btn-sm switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="javascript:;">The Rock</a>
+                                        <br>Club Type: <span class="text text-muted">SubscriberYearly</span>
+                                        <br>Club Slug: <span class="text text-muted">Rockkk</span><a href="javascript:;" class="club-slug-copy" data-toggle="tooltip" title="Copy Club Slug"><i class="fa fa-copy"></i></a>
+                                    </td>
+                                    <td class="text-center">03-03-2025</td>
+                                    <td class="text-left">Rocky R</td>
+                                    <td class="text-center">TX</td>
+                                    <td class="text-center"><a href="javascript:;" class="change_mode">SANDBOX</a></td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center"><a data-toggle="tooltip" title="Make Inactive Subscription" class="toggle_status text-green" href="javascript:;">Activated</a></td>
+                                    <td class="text-center toggle-btn-wrapper">
+                                        <div class="d-inline-block custom-control custom-switch">
+                                            <input type="checkbox" id="account_suspended_7" class="custom-control-input" name="account_suspended_7" checked>
+                                            <label class="custom-control-label" for="account_suspended_7"></label>
+                                        </div>
+                                    </td>
+                                    <td class="actions123 text-right">
+                                        <div class="d-flex justify-content-end">
+                                            <a data-toggle="tooltip" title="Switch to The Rock" class="btn-sm switch-btn" href="javascript:;"><i class="fa fa-random" aria-hidden="true"></i></a>
+                                            <a data-toggle="tooltip" title="Edit" class="btn-sm" href="javascript:;"><i class="fa fa-pencil"></i></a>
+                                            <a data-toggle="tooltip" title="Run Email Hygiene Script" href="javascript:;" class="btn-sm"><i class="fa fa-envelope-o"></i></a>
+                                            <a data-toggle="tooltip" title="Remove" class="btn-danger btn-sm" href="javascript:;"><i class="fa fa-trash"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="controls-below-table">
+                                            <div class="club-pagination-row">
+                                                <span>Showing 1 to 7 of 83 entries</span>
+                                                <ul class="pagination">
+                                                    <li class="disabled"><span>&laquo;</span></li><li class="active"><span>1</span></li><li><a href="javascript:;">2</a></li><li><a href="javascript:;">3</a></li><li><a href="javascript:;">4</a></li><li><a href="javascript:;">&raquo;</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-settings clearfix hidden-xs hidden">
+            <div class="settings clearfix">
+                <div class="trigger ion ion-settings left"></div>
+                <div class="wrapper left">
+                    <ul class="list-unstyled other-settings">
+                        <li class="clearfix mb10"><div class="left small">Nav Horizontal</div><div class="md-switch right"><label><input type="checkbox" id="navHorizontal"><span>&nbsp;</span></label></div></li>
+                        <li class="clearfix mb10"><div class="left small">Fixed Header</div><div class="md-switch right"><label><input type="checkbox" id="fixedHeader"><span>&nbsp;</span></label></div></li>
+                        <li class="clearfix mb10"><div class="left small">Nav Full</div><div class="md-switch right"><label><input type="checkbox" id="navFull"><span>&nbsp;</span></label></div></li>
+                    </ul>
+                    <hr/>
+                    <ul class="themes list-unstyled" id="themeColor">
+                        <li data-theme="theme-zero" class="active"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/vendors.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="scripts/plugins/perfect-scrollbar.min.js"></script>
+        <script src="scripts/plugins/waves.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/plugins/select2.min.js"></script>
+        <script src="club-list.js"></script>
+    </body>
+</html>

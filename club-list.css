@@ -1,0 +1,11 @@
+/* Static mock helpers for club-list.html (replaces inline styles used by the Blade view) */
+.club-title-icon { width: 50px; }
+.club-divider { line-height: 5px; border-bottom: 1px solid; border-color: blue; }
+.club-filter-input { width: 100%; }
+.club-sort { display: contents; }
+.club-sort i { line-height: 0; font-size: 18px; position: relative; color: #9ea7da; }
+.club-sort a:first-child i { top: -5px; }
+.club-sort a:last-child i { top: 7px; right: 15px; }
+.club-pagination-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.club-pagination-row .pagination { margin: 0; }
+.common_table .actions123 .btn-sm { display: inline-block; padding: 2px 7px; }

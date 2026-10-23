@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Helping With Flags - Verify Code</title>
+    <link rel="shortcut icon" type="image/png" href="images/header-logo.png">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="auth.css" rel="stylesheet">
+    <link href="auth2.css" rel="stylesheet">
+</head>
+<body class="na-body nb-body">
+    <div class="nb-shell">
+        <header class="nb-hero">
+            <div class="nb-hero-inner">
+                <img src="images/flag-heroes-icon.svg" alt="Helping With Flags">
+                <span class="nb-hero-name">Helping with Flags</span>
+                <span class="nb-hero-tag">Raise Flags, Raise Funds!</span>
+            </div>
+        </header>
+        <main class="nb-main">
+            <section class="na-card nb-card">
+                <div class="na-icon"><i class="fa fa-shield" aria-hidden="true"></i></div>
+                <h1 class="na-title">Enter passcode</h1>
+                <p class="na-subtitle">We sent a 6 digit one-time passcode to your <span id="otp-via">email</span> <strong id="otp-to"></strong>. Enter it below to sign in.</p>
+
+                <form id="otp-form" novalidate autocomplete="off">
+                    <div class="na-alert" role="alert"></div>
+
+                    <div class="na-field na-otp-field">
+                        <div class="na-otp">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 1" autocomplete="one-time-code">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 2">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 3">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 4">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 5">
+                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 6">
+                        </div>
+                        <div class="na-error"></div>
+                    </div>
+
+                    <p class="na-resend">Did not get the code? <button type="button" id="resend-btn" class="na-resend-btn">Resend code</button><span id="resend-timer"></span></p>
+
+                    <button id="otp-btn" type="submit" class="na-btn"><i class="fa fa-check" aria-hidden="true"></i>Verify &amp; Sign In</button>
+                </form>
+
+                <a class="na-link na-back" href="index.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Login</a>
+            </section>
+        </main>
+        <footer class="nb-footer"><i class="fa fa-shield" aria-hidden="true"></i> Secure sign in &middot; &copy; Helping With Flags</footer>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

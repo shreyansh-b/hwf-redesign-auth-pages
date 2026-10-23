@@ -1,0 +1,41 @@
+/* Centered card layout. Builds on auth.css tokens. */
+/* Same background image as the current login page (styles/login-new.css) */
+.nb-body {
+    background-color: var(--na-panel);
+    background-image: url('images/login-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.nb-shell { display: flex; flex-direction: column; min-height: 100vh; }
+
+.nb-hero {
+    height: 260px; padding: 40px 20px 0; text-align: center; color: var(--na-primary);
+    background: transparent;
+}
+.nb-hero-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.nb-hero img {
+    width: 60px; height: 60px; padding: 9px; background: #fff; border-radius: 16px;
+    border: 1px solid var(--na-border); box-shadow: 0 4px 10px rgba(63, 81, 181, 0.15);
+}
+.nb-hero-name { font-size: 20px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.nb-hero-tag { font-size: 14px; color: var(--na-muted); }
+
+.nb-main { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding: 0 16px 24px; }
+.nb-card { margin-top: -70px; text-align: center; box-shadow: 0 18px 48px rgba(63, 81, 181, 0.15); }
+.nb-card .na-icon { margin-left: auto; margin-right: auto; border-radius: 50%; }
+.nb-card .na-field,
+.nb-card .na-note,
+.nb-card .na-options,
+.nb-card .na-rules,
+.nb-card form { text-align: left; }
+.nb-card .na-row { justify-content: space-between; text-align: left; }
+
+.nb-footer { padding: 16px 20px 24px; text-align: center; font-size: 13px; color: var(--na-muted); }
+.nb-footer .fa { margin-right: 6px; color: var(--na-primary); }
+
+@media (max-width: 767px) {
+    .nb-hero { height: 230px; padding-top: 28px; }
+    .nb-card { margin-top: -70px; }
+}

@@ -1,0 +1,32 @@
+.hygiene-listing-icon {
+    font-size: 18px;
+}
+
+.hygiene-listing-icon--new {
+    color: #28a745;
+}
+
+.hygiene-listing-icon--run {
+    color: #aaa;
+}
+
+/* Copy icon beside the club slug on the club listing */
+.club-slug-copy {
+    margin-left: 4px;
+    color: #9aa0a6;
+}
+
+/* custom.css sets `table i.fa { font-size: 20px !important }` for every table icon; keep this one small */
+.common_table .club-slug-copy i.fa {
+    font-size: 13px !important;
+    line-height: 1;
+    vertical-align: baseline;
+    /* Inline (not Font Awesome's inline-block) so the icon stays on the same line as the end of the slug */
+    display: inline;
+}
+
+.club-slug-copy:hover,
+.club-slug-copy:focus {
+    color: #042aa0;
+    text-decoration: none;
+}
