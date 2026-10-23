@@ -2,7 +2,7 @@
 /* Same background image as the current login page (styles/login-new.css) */
 .nb-body {
     background-color: var(--na-panel);
-    background-image: url('images/login-bg.png');
+    background-image: url('images/login-bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
