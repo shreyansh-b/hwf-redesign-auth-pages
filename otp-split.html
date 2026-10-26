@@ -1,63 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Helping With Flags - Verify Code</title>
-    <link rel="shortcut icon" type="image/png" href="images/header-logo.png">
-    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="auth.css" rel="stylesheet">
-</head>
-<body class="na-body">
-    <a class="design-switch" href="otp.html"><i class="fa fa-exchange" aria-hidden="true"></i><span class="design-switch-label"> Centered design</span></a>
-    <div class="na-shell">
-        <aside class="na-brand">
-            <div class="na-brand-logo">
-                <img src="images/flag-heroes-icon.png" alt="Helping With Flags">
-                <span class="na-brand-name">Helping with Flags</span>
-            </div>
-            <div class="na-brand-copy">
-                <h2>Empowering Non-Profits, Enriching Communities</h2>
-                <p>Raise Flags, Raise Funds! Sign in to manage your club, track members, and keep campaigns moving.</p>
-                <ul class="na-points">
-                    <li><i class="fa fa-shield" aria-hidden="true"></i> Secure, passwordless sign in</li>
-                    <li><i class="fa fa-users" aria-hidden="true"></i> Manage your club in one place</li>
-                    <li><i class="fa fa-flag" aria-hidden="true"></i> Track flag campaigns &amp; funds raised</li>
-                </ul>
-            </div>
-            <div class="na-brand-foot">&copy; Helping With Flags</div>
-        </aside>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Helping With Flags - Verify Code</title>
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="images/header-logo.png"
+		/>
+		<link
+			href="fonts/font-awesome/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+		<link href="auth.css" rel="stylesheet" />
+	</head>
+	<body class="na-body">
+		<a class="design-switch" href="otp.html"
+			><i class="fa fa-exchange" aria-hidden="true"></i
+			><span class="design-switch-label"> Centered design</span></a
+		>
+		<div class="na-shell">
+			<aside class="na-brand">
+				<div class="na-brand-logo">
+					<img
+						src="images/flag-heroes-icon.png"
+						alt="Helping With Flags"
+					/>
+					<span class="na-brand-name">Helping with Flags</span>
+				</div>
+				<div class="na-brand-copy">
+					<h2>Empowering Non-Profits, Enriching Communities</h2>
+					<p>
+						Raise Flags, Raise Funds! Sign in to manage your club,
+						track members, and keep campaigns moving.
+					</p>
+					<ul class="na-points">
+						<li>
+							<i class="fa fa-shield" aria-hidden="true"></i>
+							Secure, passwordless sign in
+						</li>
+						<li>
+							<i class="fa fa-users" aria-hidden="true"></i>
+							Manage your club in one place
+						</li>
+						<li>
+							<i class="fa fa-flag" aria-hidden="true"></i> Track
+							flag campaigns &amp; funds raised
+						</li>
+					</ul>
+				</div>
+				<div class="na-brand-foot">&copy; Helping With Flags</div>
+			</aside>
 
-        <main class="na-main">
-            <section class="na-card">
-                <div class="na-icon"><i class="fa fa-shield" aria-hidden="true"></i></div>
-                <h1 class="na-title">Enter passcode</h1>
-                <p class="na-subtitle">We sent a 6 digit one-time passcode to your <span id="otp-via">email</span> <strong id="otp-to"></strong>. Enter it below to sign in.</p>
+			<main class="na-main">
+				<section class="na-card">
+					<div class="na-icon">
+						<i class="fa fa-shield" aria-hidden="true"></i>
+					</div>
+					<h1 class="na-title">Enter passcode</h1>
+					<p class="na-subtitle">
+						We sent a 6 digit one-time passcode to your
+						<span id="otp-via">email</span>
+						<strong id="otp-to"></strong>. Enter it below to sign
+						in.
+					</p>
 
-                <form id="otp-form" novalidate autocomplete="off">
-                    <div class="na-alert" role="alert"></div>
+					<form id="otp-form" novalidate autocomplete="off">
+						<div class="na-alert" role="alert"></div>
 
-                    <div class="na-field na-otp-field">
-                        <div class="na-otp">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 1" autocomplete="one-time-code">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 2">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 3">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 4">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 5">
-                            <input class="na-otp-digit" type="text" inputmode="numeric" maxlength="1" placeholder=" " aria-label="Digit 6">
-                        </div>
-                        <div class="na-error"></div>
-                    </div>
+						<div class="na-field na-otp-field">
+							<div class="na-otp">
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 1"
+									autocomplete="one-time-code"
+								/>
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 2"
+								/>
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 3"
+								/>
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 4"
+								/>
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 5"
+								/>
+								<input
+									class="na-otp-digit"
+									type="text"
+									inputmode="numeric"
+									maxlength="1"
+									placeholder=" "
+									aria-label="Digit 6"
+								/>
+							</div>
+							<div class="na-error"></div>
+						</div>
 
-                    <p class="na-resend">Did not get the code? <button type="button" id="resend-btn" class="na-resend-btn">Resend code</button><span id="resend-timer"></span></p>
+						<p class="na-resend">
+							Did not get the code?
+							<button
+								type="button"
+								id="resend-btn"
+								class="na-resend-btn"
+							>
+								Resend code</button
+							><span id="resend-timer"></span>
+						</p>
 
-                    <button id="otp-btn" type="submit" class="na-btn"><i class="fa fa-check" aria-hidden="true"></i>Verify &amp; Sign In</button>
-                </form>
+						<button id="otp-btn" type="submit" class="na-btn">
+							<i class="fa fa-check" aria-hidden="true"></i>Verify
+							&amp; Sign In
+						</button>
+					</form>
 
-                <a class="na-link na-back" href="index-split.html"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Login</a>
-            </section>
-        </main>
-    </div>
-    <script src="auth.js" defer></script>
-</body>
+					<a class="na-link na-back" href="index-split.html"
+						><i class="fa fa-arrow-left" aria-hidden="true"></i>Back
+						to Login</a
+					>
+				</section>
+			</main>
+		</div>
+		<script src="auth.js" defer></script>
+	</body>
 </html>
