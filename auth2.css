@@ -47,7 +47,13 @@
 }
 
 @media (max-width: 767px) {
-    .nb-hero { padding: 28px 20px 50px; }
-    .nb-hero-tag { font-size: 12px; }
-    .nb-card { margin-top: -50px; }
+    html, body { height: 100%; }
+    .nb-body { height: 100dvh; overflow: hidden; }
+    .nb-shell { min-height: 100dvh; height: 100dvh; }
+    .nb-hero { padding: 20px 20px 40px; }
+    .nb-hero img { width: 56px; height: 56px; padding: 7px; border-radius: 14px; }
+    .nb-hero-name { font-size: 15px; }
+    .nb-hero-tag { font-size: 11px; }
+    .nb-main { padding: 0 16px 10px; align-items: flex-start; }
+    .nb-card { margin-top: -30px; }
 }
