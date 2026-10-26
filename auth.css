@@ -27,24 +27,47 @@
 
 .na-shell {
     display: flex; min-height: 100vh;
+    position: relative;
+    isolation: isolate;
     background-color: var(--na-panel);
-    background-image: url('images/login-bg.jpg');
+}
+.na-shell::before {
+    content: '';
+    position: fixed; inset: 0;
+    z-index: -1;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('images/login-bg.jpg');
+    background-size: 100% 100%;
+    pointer-events: none;
 }
 
-/* Brand side */
+/* Brand side (30% on large and xl screens) */
 .na-brand {
-    flex: 1 1 46%;
+    flex: 0 0 30%;
+    max-width: 30%;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    padding: 48px;
+    padding: clamp(24px, 2.5vw, 44px);
     color: #fff;
     position: relative;
     overflow: hidden;
     background: linear-gradient(155deg, #3f51b5 0%, #2f3d94 100%);
+    box-sizing: border-box;
+    isolation: isolate;
+}
+.na-brand::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url('images/login-bg-left.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 .na-brand::before {
     content: '';
@@ -76,28 +99,42 @@
     .na-flagmark-cloth { animation: none; }
 }
 .na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: 14px; }
+.na-brand-flagmark { display: none; }
+.na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: clamp(10px, 1vw, 14px); }
 .na-brand-logo img {
-    width: clamp(52px, 7vw, 96px); height: clamp(52px, 7vw, 96px); padding: clamp(8px, 1vw, 14px);
+    width: clamp(44px, 4vw, 76px); height: clamp(44px, 4vw, 76px); padding: clamp(6px, 0.7vw, 12px);
     background: #fff; border-radius: 20%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
-.na-brand-name { font-size: clamp(16px, 1.6vw, 22px); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.na-brand-name { font-size: clamp(13px, 1.1vw, 19px); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
 .na-brand-copy {
     position: relative; z-index: 1;
     flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center;
+    margin: clamp(14px, 2vh, 28px) 0;
 }
-.na-brand-copy h2 { margin: 0 0 14px; font-size: 34px; font-weight: 600; line-height: 1.2; color: #fff; }
-.na-brand-copy p { margin: 0 0 28px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
-.na-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.na-points li { display: flex; align-items: center; gap: 12px; font-size: 14px; }
+.na-brand-copy h2 { margin: 0 0 clamp(8px, 1.2vh, 14px); font-size: clamp(18px, 1.8vw, 30px); font-weight: 600; line-height: 1.25; color: #fff; }
+.na-brand-copy p { margin: 0 0 clamp(12px, 1.8vh, 24px); font-size: clamp(12px, 0.9vw, 14.5px); line-height: 1.5; color: rgba(255, 255, 255, 0.85); }
+.na-points { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(8px, 1.2vh, 12px); }
+.na-points li { display: flex; align-items: center; gap: clamp(8px, 1vw, 12px); font-size: clamp(12px, 0.85vw, 13.5px); line-height: 1.35; }
 .na-points .fa {
-    flex: 0 0 34px; width: 34px; height: 34px; line-height: 34px; text-align: center;
-    font-size: 16px; border-radius: 10px; background: rgba(255, 255, 255, 0.16);
+    flex: 0 0 30px; width: 30px; height: 30px; line-height: 30px; text-align: center;
+    font-size: 14px; border-radius: 9px; background: rgba(255, 255, 255, 0.16);
+    flex-shrink: 0;
 }
-.na-brand-foot { position: relative; z-index: 1; flex: 0 0 auto; font-size: 13px; color: rgba(255, 255, 255, 0.7); }
+.na-brand-foot { position: relative; z-index: 1; flex: 0 0 auto; font-size: clamp(11px, 0.75vw, 12.5px); color: rgba(255, 255, 255, 0.7); }
 
-/* Form side */
-.na-main { flex: 1 1 54%; display: flex; align-items: center; justify-content: center; padding: 32px 20px; }
+/* Form side (70% on large and xl screens) */
+.na-main {
+    flex: 0 0 70%;
+    max-width: 70%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    box-sizing: border-box;
+}
 .na-card {
     width: 100%; max-width: 460px; padding: 32px;
     background: #fff; border: 1px solid var(--na-border); border-radius: 16px;
@@ -283,12 +320,52 @@
     font-size: 20px; font-weight: 700; letter-spacing: 0.06em;
     text-transform: uppercase; color: var(--na-primary);
 }
-@media (max-width: 991px) {
+/* Medium screens (md: 768px - 991px) -> 50-50 ratio */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .na-brand {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+        display: flex;
+        padding: clamp(20px, 2.5vw, 36px);
+    }
+    .na-brand-logo img { width: clamp(44px, 4.5vw, 64px); height: clamp(44px, 4.5vw, 64px); }
+    .na-brand-name { font-size: clamp(13px, 1.3vw, 17px); }
+    .na-brand-copy h2 { font-size: clamp(19px, 2vw, 25px); }
+    .na-brand-copy p { font-size: clamp(12.5px, 1.1vw, 14px); }
+    .na-points li { font-size: clamp(12px, 1.05vw, 13.5px); }
+
+    .na-main {
+        flex: 0 0 50%;
+        max-width: 50%;
+        width: 50%;
+        padding: 24px clamp(12px, 1.8vw, 20px);
+    }
+    .na-card {
+        padding: clamp(20px, 2.4vh, 28px) clamp(16px, 2vw, 24px);
+        max-width: 440px;
+    }
+    .na-card-head { margin-bottom: clamp(14px, 2vh, 20px); gap: 10px; }
+    .na-card-head .na-icon { width: 44px; height: 44px; font-size: 20px; border-radius: 12px; }
+    .na-card-head .na-title { font-size: clamp(18px, 2vw, 22px); }
+    .na-tabs { margin-bottom: clamp(12px, 1.8vh, 16px); }
+    .na-tab { height: 32px; font-size: clamp(11px, 1.15vw, 12.5px); padding: 0 4px; }
+    .na-card-brand { display: none; }
+}
+
+/* Below md screens (< 768px) -> only login part */
+@media (max-width: 767.98px) {
     html, body { height: 100%; }
     body.na-body:not(.nb-body) { height: 100vh; height: 100dvh; overflow-y: auto; overflow-x: hidden; }
     .na-shell { min-height: 100vh; min-height: 100dvh; }
-    .na-brand { display: none; }
-    .na-main { flex-basis: 100%; padding: 16px; }
+    .na-brand { display: none !important; }
+    .na-main {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        flex-basis: 100%;
+        padding: 16px;
+    }
     .na-card-brand { display: flex; margin-bottom: clamp(12px, 2.4vh, 24px); }
     .na-card-brand img { width: clamp(40px, 7vh, 56px); height: clamp(40px, 7vh, 56px); }
     .na-card-brand span { font-size: clamp(15px, 2.4vh, 20px); }
