@@ -57,7 +57,8 @@
     box-sizing: border-box;
     isolation: isolate;
 }
-.na-brand::after {
+/* Flag background in blue section (Normal split only) */
+.na-shell .na-brand::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -69,6 +70,7 @@
     mix-blend-mode: multiply;
     pointer-events: none;
 }
+.na-shell .na-brand-flagmark { display: none; }
 .na-brand::before {
     content: '';
     position: absolute; right: -60px; bottom: -60px;
@@ -98,8 +100,6 @@
 @media (prefers-reduced-motion: reduce) {
     .na-flagmark-cloth { animation: none; }
 }
-.na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: 14px; }
-.na-brand-flagmark { display: none; }
 .na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: clamp(10px, 1vw, 14px); }
 .na-brand-logo img {
     width: clamp(44px, 4vw, 76px); height: clamp(44px, 4vw, 76px); padding: clamp(6px, 0.7vw, 12px);

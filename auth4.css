@@ -38,6 +38,7 @@ body.nc-body::-webkit-scrollbar-thumb:hover { background-color: rgba(63, 81, 181
 
 /* Reuse the existing .na-brand brand panel, resized to fit inside the card's right half. */
 .nc-card .na-brand { flex: 1 1 46%; padding: clamp(28px, 5vh, 56px) clamp(24px, 4vw, 48px); }
+.nc-card .na-brand::after { display: none !important; }
 .nc-card .na-brand-logo img { width: clamp(44px, 5vw, 64px); height: clamp(44px, 5vw, 64px); padding: 10px; }
 .nc-card .na-brand-name { font-size: clamp(13px, 1.1vw, 16px); }
 .nc-card .na-brand-copy h2 { font-size: clamp(20px, 2.1vw, 28px); margin-bottom: 12px; }
