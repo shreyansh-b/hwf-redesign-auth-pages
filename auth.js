@@ -64,7 +64,7 @@
         tabs.forEach(function (t) {
             t.addEventListener('click', function () { setMode(t.getAttribute('data-mode')); });
         });
-        setMode('email-pass');
+        setMode('email');
 
         loginForm.addEventListener('submit', function (e) {
             e.preventDefault();
