@@ -42,6 +42,10 @@
 .nb-footer { padding: 16px 20px 24px; text-align: center; font-size: 13px; color: var(--na-muted); }
 .nb-footer .fa { margin-right: 6px; color: var(--na-primary); }
 
+@media (max-width: 991px) {
+    .nb-footer { display: none; }
+}
+
 @media (max-width: 767px) {
     .nb-hero { padding: 28px 20px 50px; }
     .nb-hero-tag { font-size: 12px; }
