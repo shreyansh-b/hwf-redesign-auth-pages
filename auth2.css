@@ -51,7 +51,7 @@
     .nb-body { height: 100dvh; overflow: hidden; }
     .nb-shell { min-height: 100dvh; height: 100dvh; justify-content: center; }
     .nb-hero { padding: 20px 20px 40px; }
-    .nb-hero img { width: 76px; height: 76px; padding: 9px; border-radius: 16px; }
+    .nb-hero img { width: 96px; height: 96px; padding: 9px; border-radius: 16px; }
     .nb-hero-name { font-size: 15px; }
     .nb-hero-tag { font-size: 11px; }
     .nb-main { flex: 0 1 auto; padding: 0 16px 10px; align-items: flex-start; }
