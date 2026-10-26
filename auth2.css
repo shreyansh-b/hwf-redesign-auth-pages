@@ -10,13 +10,19 @@
 }
 .nb-shell { display: flex; flex-direction: column; min-height: 100vh; }
 
+.nb-body { scrollbar-width: thin; scrollbar-color: rgba(63, 81, 181, 0.35) transparent; }
+.nb-body::-webkit-scrollbar { width: 6px; height: 6px; }
+.nb-body::-webkit-scrollbar-track { background: transparent; }
+.nb-body::-webkit-scrollbar-thumb { background-color: rgba(63, 81, 181, 0.35); border-radius: 999px; }
+.nb-body::-webkit-scrollbar-thumb:hover { background-color: rgba(63, 81, 181, 0.55); }
+
 .nb-hero {
-    height: 260px; padding: 40px 20px 0; text-align: center; color: var(--na-primary);
+    height: 340px; padding: 40px 20px 0; text-align: center; color: var(--na-primary);
     background: transparent;
 }
 .nb-hero-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .nb-hero img {
-    width: 60px; height: 60px; padding: 9px; background: #fff; border-radius: 16px;
+    width: 160px; height: 160px; padding: 18px; background: #fff; border-radius: 28px;
     border: 1px solid var(--na-border); box-shadow: 0 4px 10px rgba(63, 81, 181, 0.15);
 }
 .nb-hero-name { font-size: 20px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -36,6 +42,6 @@
 .nb-footer .fa { margin-right: 6px; color: var(--na-primary); }
 
 @media (max-width: 767px) {
-    .nb-hero { height: 230px; padding-top: 28px; }
+    .nb-hero { height: 320px; padding-top: 28px; }
     .nb-card { margin-top: -70px; }
 }
