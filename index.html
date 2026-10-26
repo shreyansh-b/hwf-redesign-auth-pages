@@ -37,20 +37,20 @@
 
                     <div class="na-field email-field">
                         <label for="email">Email ID <span class="req">*</span></label>
-                        <input id="email" class="na-input" type="email" placeholder="Enter your email id">
+                        <input id="email" name="email" class="na-input" type="email" placeholder="Enter your email id">
                         <div class="na-error"></div>
                     </div>
 
                     <div class="na-field phone-field">
                         <label for="phone">Phone <span class="req">*</span></label>
-                        <input id="phone" class="na-input" type="tel" placeholder="Enter your phone">
+                        <input id="phone" name="phone" class="na-input" type="tel" placeholder="Enter your phone">
                         <div class="na-error"></div>
                     </div>
 
                     <div class="na-field password-field">
                         <label for="password">Password <span class="req">*</span></label>
                         <div class="na-input-wrap has-toggle">
-                            <input id="password" class="na-input" type="password" placeholder="Enter your password">
+                            <input id="password" name="password" class="na-input" type="password" placeholder="Enter your password">
                             <button type="button" class="na-eye" aria-label="Show password"><i class="fa fa-eye" aria-hidden="true"></i></button>
                         </div>
                         <div class="na-error"></div>
@@ -74,6 +74,10 @@
             </section>
         </main>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="auth-validate.js"></script>
     <script src="auth.js" defer></script>
 </body>
 </html>
