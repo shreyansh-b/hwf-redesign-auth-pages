@@ -2,16 +2,33 @@
 /* Same background image as the current login page (styles/login-new.css) */
 .nb-body {
     background-color: var(--na-panel);
-    background-image: url('images/login-bg.jpg');
+    position: relative;
+    isolation: isolate;
+}
+.nb-body::before {
+    content: '';
+    position: fixed; inset: 0;
+    z-index: -1;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('images/login-bg.jpg');
+    background-size: 100% 100%;
+    pointer-events: none;
 }
 html, body { height: 100%; }
 body.nb-body {
     height: 100vh; height: 100dvh; min-height: 0; overflow-y: auto; overflow-x: hidden;
     scrollbar-width: thin; scrollbar-color: rgba(63, 81, 181, 0.35) transparent;
+}
+@media (max-width: 767.98px) {
+    .nb-body::before {
+        background-image: url('images/login-bg-left.jpg'), url('images/login-bg-right.jpg');
+        background-position: left center, right center;
+        background-size: 50% 100%, 50% 100%;
+    }
+    .nb-hero-tag {
+        color: #2b2f4a !important;
+    }
 }
 body.nb-body::-webkit-scrollbar { width: 6px; }
 body.nb-body::-webkit-scrollbar-track { background: transparent; }
