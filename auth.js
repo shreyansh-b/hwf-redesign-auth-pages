@@ -25,6 +25,8 @@
     }
 
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var isSplitDesign = /-split\.html$/.test(window.location.pathname);
+    function pageUrl(name) { return isSplitDesign ? name.replace(/\.html$/, '-split.html') : name; }
 
     // Show / hide password
     $all('.na-eye').forEach(function (btn) {
@@ -89,7 +91,7 @@
                 var target = mode === 'phone' ? phone.value.trim() : email.value.trim();
                 showAlert(loginForm, 'success', 'Passcode sent. Redirecting...');
                 setTimeout(function () {
-                    window.location.href = 'otp.html?mode=' + mode + '&to=' + encodeURIComponent(target);
+                    window.location.href = pageUrl('otp.html') + '?mode=' + mode + '&to=' + encodeURIComponent(target);
                 }, 600);
             }
         });
@@ -143,7 +145,7 @@
             if (!ok) { return; }
             showAlert(resetForm, 'success', 'Password updated. Redirecting to login...');
             $('#reset-btn', resetForm).disabled = true;
-            setTimeout(function () { window.location.href = 'index.html'; }, 1200);
+            setTimeout(function () { window.location.href = pageUrl('index.html'); }, 1200);
         });
     }
 

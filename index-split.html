@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Helping With Flags - Login</title>
+    <link rel="shortcut icon" type="image/png" href="images/header-logo.png">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="auth.css" rel="stylesheet">
+</head>
+<body class="na-body">
+    <a class="design-switch" href="index.html"><i class="fa fa-exchange" aria-hidden="true"></i><span class="design-switch-label"> Centered design</span></a>
+    <div class="na-shell">
+        <aside class="na-brand">
+            <div class="na-brand-logo">
+                <img src="images/flag-heroes-icon.png" alt="Helping With Flags">
+                <span class="na-brand-name">Helping with Flags</span>
+            </div>
+            <div class="na-brand-copy">
+                <h2>Empowering Non-Profits, Enriching Communities</h2>
+                <p>Raise Flags, Raise Funds! Sign in to manage your club, track members, and keep campaigns moving.</p>
+                <ul class="na-points">
+                    <li><i class="fa fa-shield" aria-hidden="true"></i> Secure, passwordless sign in</li>
+                    <li><i class="fa fa-users" aria-hidden="true"></i> Manage your club in one place</li>
+                    <li><i class="fa fa-flag" aria-hidden="true"></i> Track flag campaigns &amp; funds raised</li>
+                </ul>
+            </div>
+            <div class="na-brand-foot">&copy; Helping With Flags</div>
+        </aside>
+
+        <main class="na-main">
+            <section class="na-card">
+                <div class="na-card-head">
+                    <div class="na-icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    <div>
+                        <h1 class="na-title">Welcome back</h1>
+                        <p class="na-subtitle">Sign in to manage your club.</p>
+                    </div>
+                </div>
+
+                <form id="login-form" novalidate autocomplete="off">
+                    <input type="hidden" id="login_with" value="email">
+                    <div class="na-tabs" role="tablist">
+                        <button type="button" class="na-tab active" data-mode="email">Email Code</button>
+                        <button type="button" class="na-tab" data-mode="phone">Phone Code</button>
+                        <button type="button" class="na-tab" data-mode="email-pass">Email &amp; Password</button>
+                    </div>
+
+                    <div class="na-alert" role="alert"></div>
+
+                    <div class="na-field email-field">
+                        <label for="email">Email ID <span class="req">*</span></label>
+                        <input id="email" class="na-input" type="email" placeholder="Enter your email id">
+                        <div class="na-error"></div>
+                    </div>
+
+                    <p class="na-note phone-note">By providing your phone number, you agree to receive a one-time text message with a verification code to log in. Message &amp; data rates may apply.</p>
+                    <div class="na-field phone-field">
+                        <label for="phone">Phone <span class="req">*</span></label>
+                        <input id="phone" class="na-input" type="tel" placeholder="Enter your phone">
+                        <div class="na-error"></div>
+                    </div>
+
+                    <div class="na-field password-field">
+                        <label for="password">Password <span class="req">*</span></label>
+                        <div class="na-input-wrap has-toggle">
+                            <input id="password" class="na-input" type="password" placeholder="Enter your password">
+                            <button type="button" class="na-eye" aria-label="Show password"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="na-error"></div>
+                    </div>
+
+                    <p class="na-note otp-note">We will send a one-time passcode to verify it is you. No password needed.</p>
+
+                    <div class="na-row">
+                        <label class="na-check"><input type="checkbox" checked> Remember me</label>
+                        <a class="na-link forgot-password" href="forgot-password-split.html">Forgot Your Password?</a>
+                    </div>
+
+                    <button id="submit-btn" type="submit" class="na-btn">
+                        <i id="submit-icon" class="fa fa-sign-in" aria-hidden="true"></i><span id="submit-label">Sign In</span>
+                    </button>
+                </form>
+
+                <div class="na-foot">
+                    <a href="#">Terms of Services</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="auth.js" defer></script>
+</body>
+</html>

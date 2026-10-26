@@ -25,25 +25,53 @@
 .na-body *::after { box-sizing: border-box; }
 .na-body a { color: var(--na-primary); }
 
-.na-shell { display: flex; min-height: 100vh; }
+.na-shell {
+    display: flex; min-height: 100vh;
+    background-color: var(--na-panel);
+    background-image: url('images/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 /* Brand side */
 .na-brand {
     flex: 1 1 46%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 48px;
     color: #fff;
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(155deg, #3f51b5 0%, #2f3d94 100%);
 }
-.na-brand-logo { display: flex; align-items: center; gap: 14px; }
+.na-brand::before {
+    content: '';
+    position: absolute; right: -60px; bottom: -60px;
+    width: 420px; height: 420px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+.na-brand::after {
+    content: '\f024';
+    font-family: FontAwesome;
+    position: absolute; right: -40px; bottom: -70px;
+    font-size: 340px; line-height: 1;
+    color: rgba(255, 255, 255, 0.06);
+    transform: rotate(-18deg);
+}
+.na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: 14px; }
 .na-brand-logo img {
-    width: 52px; height: 52px; padding: 8px;
-    background: #fff; border-radius: 14px;
+    width: clamp(52px, 7vw, 96px); height: clamp(52px, 7vw, 96px); padding: clamp(8px, 1vw, 14px);
+    background: #fff; border-radius: 20%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.na-brand-name { font-size: 18px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.na-brand-name { font-size: clamp(16px, 1.6vw, 22px); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.na-brand-copy {
+    position: relative; z-index: 1;
+    flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center;
+}
 .na-brand-copy h2 { margin: 0 0 14px; font-size: 34px; font-weight: 600; line-height: 1.2; color: #fff; }
 .na-brand-copy p { margin: 0 0 28px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
 .na-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
@@ -52,7 +80,7 @@
     flex: 0 0 34px; width: 34px; height: 34px; line-height: 34px; text-align: center;
     font-size: 16px; border-radius: 10px; background: rgba(255, 255, 255, 0.16);
 }
-.na-brand-foot { font-size: 13px; color: rgba(255, 255, 255, 0.7); }
+.na-brand-foot { position: relative; z-index: 1; flex: 0 0 auto; font-size: 13px; color: rgba(255, 255, 255, 0.7); }
 
 /* Form side */
 .na-main { flex: 1 1 54%; display: flex; align-items: center; justify-content: center; padding: 32px 20px; }
@@ -69,6 +97,11 @@
 }
 .na-title { margin: 0; font-size: 28px; font-weight: 600; line-height: 1.2; color: var(--na-primary); }
 .na-subtitle { margin: 6px 0 22px; font-size: 13px; line-height: 1.5; color: var(--na-muted); }
+
+.na-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.na-card-head .na-icon { margin-bottom: 0; flex-shrink: 0; }
+.na-card-head .na-title { font-size: 22px; }
+.na-card-head .na-subtitle { margin: 2px 0 0; }
 
 /* Login method switch */
 .na-tabs {
@@ -189,6 +222,25 @@
 .na-option input { accent-color: var(--na-primary); }
 
 .na-hidden { display: none !important; }
+
+/* Design switcher pill (top right) */
+.design-switch {
+    position: fixed; top: 16px; right: 16px; z-index: 50;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; font-size: 13px; font-weight: 600; text-decoration: none;
+    color: var(--na-primary); background: #fff; border: 1px solid var(--na-border);
+    border-radius: 999px; box-shadow: 0 6px 16px rgba(63, 81, 181, 0.2);
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.design-switch:hover { background: var(--na-primary); color: #fff; transform: translateY(-1px); }
+@media (max-width: 480px) {
+    .design-switch { top: 10px; right: 10px; padding: 7px 12px; font-size: 12px; }
+}
+@media (max-width: 360px) {
+    .design-switch { width: 34px; height: 34px; padding: 0; justify-content: center; gap: 0; }
+    .design-switch .fa { font-size: 14px; }
+    .design-switch-label { display: none; }
+}
 
 @media (max-width: 991px) {
     .na-brand { display: none; }
