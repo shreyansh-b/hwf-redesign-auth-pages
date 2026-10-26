@@ -17,19 +17,20 @@
 .nb-body::-webkit-scrollbar-thumb:hover { background-color: rgba(63, 81, 181, 0.55); }
 
 .nb-hero {
-    height: 340px; padding: 40px 20px 0; text-align: center; color: var(--na-primary);
+    padding: 40px 20px 60px; text-align: center; color: var(--na-primary);
     background: transparent;
 }
 .nb-hero-inner { display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .nb-hero img {
-    width: 160px; height: 160px; padding: 18px; background: #fff; border-radius: 28px;
+    width: clamp(80px, 18vw, 160px); height: clamp(80px, 18vw, 160px);
+    padding: clamp(10px, 2vw, 18px); background: #fff; border-radius: 20%;
     border: 1px solid var(--na-border); box-shadow: 0 4px 10px rgba(63, 81, 181, 0.15);
 }
 .nb-hero-name { font-size: 20px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-.nb-hero-tag { font-size: 14px; color: var(--na-muted); }
+.nb-hero-tag { max-width: 420px; font-size: 14px; line-height: 1.4; color: var(--na-muted); }
 
 .nb-main { flex: 1; display: flex; justify-content: center; align-items: flex-start; padding: 0 16px 24px; }
-.nb-card { margin-top: -70px; text-align: center; box-shadow: 0 18px 48px rgba(63, 81, 181, 0.15); }
+.nb-card { margin-top: -60px; text-align: center; box-shadow: 0 18px 48px rgba(63, 81, 181, 0.15); }
 .nb-card .na-icon { margin-left: auto; margin-right: auto; border-radius: 50%; }
 .nb-card .na-field,
 .nb-card .na-note,
@@ -42,6 +43,7 @@
 .nb-footer .fa { margin-right: 6px; color: var(--na-primary); }
 
 @media (max-width: 767px) {
-    .nb-hero { height: 320px; padding-top: 28px; }
-    .nb-card { margin-top: -70px; }
+    .nb-hero { padding: 28px 20px 50px; }
+    .nb-hero-tag { font-size: 12px; }
+    .nb-card { margin-top: -50px; }
 }
