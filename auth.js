@@ -25,8 +25,23 @@
     }
 
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var isSplitDesign = /-split\.html$/.test(window.location.pathname);
-    function pageUrl(name) { return isSplitDesign ? name.replace(/\.html$/, '-split.html') : name; }
+    var designMatch = window.location.pathname.match(/(-split|-card)\.html$/);
+    var designSuffix = designMatch ? designMatch[1] : '';
+    function pageUrl(name) { return designSuffix ? name.replace(/\.html$/, designSuffix + '.html') : name; }
+
+    // Design switcher dropdown toggle
+    $all('.design-switch-menu').forEach(function (menu) {
+        var toggle = $('.design-switch-toggle', menu);
+        if (!toggle) { return; }
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+    });
+    document.addEventListener('click', function () {
+        $all('.design-switch-menu.open').forEach(function (menu) { menu.classList.remove('open'); });
+    });
 
     // Show / hide password
     $all('.na-eye').forEach(function (btn) {

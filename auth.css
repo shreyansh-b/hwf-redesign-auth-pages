@@ -53,31 +53,27 @@
     background: radial-gradient(circle at 42% 38%, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02) 55%, rgba(0, 0, 0, 0.08) 100%);
     border-radius: 50%;
 }
-.na-brand-flagmark { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
-.na-brand-flagmark span {
-    position: absolute; right: -40px; bottom: -70px;
-    font-family: FontAwesome; font-size: 340px; line-height: 1;
-    color: rgba(255, 255, 255, 0.06);
+.na-brand-flagmark {
+    position: absolute; right: 4%; bottom: -3%;
+    width: clamp(150px, 22vw, 280px); height: auto;
+    pointer-events: none; z-index: 0;
+    overflow: visible;
 }
-.na-flagmark-pole {
-    clip-path: polygon(0 0, 18% 0, 18% 100%, 0 100%);
-    transform: rotate(-18deg);
-    transform-origin: 14% 18%;
-}
+.na-flagmark-pole { stroke: rgba(255, 255, 255, 0.16); }
+.na-flagmark-ball { fill: rgba(255, 255, 255, 0.16); }
 .na-flagmark-cloth {
-    clip-path: polygon(18% 0, 100% 0, 100% 100%, 18% 100%);
-    transform-origin: 14% 18%;
-    filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.18));
+    fill: rgba(255, 255, 255, 0.14);
+    transform-origin: 230px 40px;
     animation: na-flag-wave 6s ease-in-out infinite;
 }
 @keyframes na-flag-wave {
-    0%, 100% { transform: rotate(-18deg) skewY(0deg); }
-    25% { transform: rotate(-15deg) skewY(2.5deg); }
-    50% { transform: rotate(-20deg) skewY(-1.5deg); }
-    75% { transform: rotate(-16deg) skewY(1.5deg); }
+    0%, 100% { transform: skewY(0deg); }
+    25% { transform: skewY(2.5deg); }
+    50% { transform: skewY(-1.5deg); }
+    75% { transform: skewY(1.5deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-    .na-flagmark-cloth { animation: none; transform: rotate(-18deg); }
+    .na-flagmark-cloth { animation: none; }
 }
 .na-brand-logo { position: relative; z-index: 1; flex: 0 0 auto; display: flex; align-items: center; gap: 14px; }
 .na-brand-logo img {
@@ -241,23 +237,38 @@
 
 .na-hidden { display: none !important; }
 
-/* Design switcher pill (top right) */
-.design-switch {
-    position: fixed; top: 16px; right: 16px; z-index: 50;
+/* Design switcher dropdown (top right) */
+.design-switch-menu { position: fixed; top: 16px; right: 16px; z-index: 50; }
+.design-switch-toggle {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 9px 16px; font-size: 13px; font-weight: 600; text-decoration: none;
     color: var(--na-primary); background: #fff; border: 1px solid var(--na-border);
     border-radius: 999px; box-shadow: 0 6px 16px rgba(63, 81, 181, 0.2);
-    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    cursor: pointer; transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
 }
-.design-switch:hover { background: var(--na-primary); color: #fff; transform: translateY(-1px); }
+.design-switch-toggle:hover { background: var(--na-primary); color: #fff; transform: translateY(-1px); }
+.design-switch-dropdown {
+    position: absolute; top: calc(100% + 8px); right: 0; min-width: 190px;
+    display: none; flex-direction: column; gap: 2px;
+    background: #fff; border: 1px solid var(--na-border); border-radius: 14px;
+    padding: 6px; box-shadow: 0 18px 40px rgba(43, 47, 74, 0.22);
+}
+.design-switch-menu.open .design-switch-dropdown { display: flex; }
+.design-switch-dropdown a {
+    padding: 9px 12px; font-size: 13px; font-weight: 600; text-decoration: none;
+    color: var(--na-text); border-radius: 9px;
+}
+.design-switch-dropdown a:hover { background: var(--na-soft); color: var(--na-primary); }
+.design-switch-dropdown a[aria-current="page"] { color: var(--na-primary); background: var(--na-soft); }
 @media (max-width: 480px) {
-    .design-switch { top: 10px; right: 10px; padding: 7px 12px; font-size: 12px; }
+    .design-switch-menu { top: 10px; right: 10px; }
+    .design-switch-toggle { padding: 7px 12px; font-size: 12px; }
 }
 @media (max-width: 360px) {
-    .design-switch { width: 34px; height: 34px; padding: 0; justify-content: center; gap: 0; }
-    .design-switch .fa { font-size: 14px; }
+    .design-switch-toggle { width: 34px; height: 34px; padding: 0; justify-content: center; gap: 0; }
+    .design-switch-toggle .fa { font-size: 14px; }
     .design-switch-label { display: none; }
+    .design-switch-dropdown { top: calc(100% + 6px); }
 }
 
 .na-card-brand {

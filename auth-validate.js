@@ -3,8 +3,9 @@
     'use strict';
     if (!$) { return; }
 
-    var isSplitDesign = /-split\.html$/.test(window.location.pathname);
-    function pageUrl(name) { return isSplitDesign ? name.replace(/\.html$/, '-split.html') : name; }
+    var designMatch = window.location.pathname.match(/(-split|-card)\.html$/);
+    var designSuffix = designMatch ? designMatch[1] : '';
+    function pageUrl(name) { return designSuffix ? name.replace(/\.html$/, designSuffix + '.html') : name; }
 
     function showAlert($form, type, message) {
         var $box = $form.find('.na-alert');

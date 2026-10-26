@@ -16,16 +16,21 @@
 		<link href="auth.css" rel="stylesheet" />
 	</head>
 	<body class="na-body">
-		<a class="design-switch" href="otp.html"
-			><i class="fa fa-exchange" aria-hidden="true"></i
-			><span class="design-switch-label"> Centered design</span></a
-		>
+		<div class="design-switch-menu">
+			<button type="button" class="design-switch-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-exchange" aria-hidden="true"></i><span class="design-switch-label"> Design</span></button>
+			<div class="design-switch-dropdown">
+				<a href="otp.html">Centered design</a>
+				<a href="otp-split.html" aria-current="page">Split design</a>
+				<a href="otp-card.html">Card split design</a>
+			</div>
+		</div>
 		<div class="na-shell">
 			<aside class="na-brand">
-				<div class="na-brand-flagmark" aria-hidden="true">
-					<span class="na-flagmark-pole">&#xf024;</span>
-					<span class="na-flagmark-cloth">&#xf024;</span>
-				</div>
+				<svg class="na-brand-flagmark" viewBox="0 0 260 460" aria-hidden="true" focusable="false">
+					<path class="na-flagmark-cloth" d="M230,30 C165,18 110,48 70,38 C108,78 168,92 230,112 L230,30 Z"></path>
+					<line class="na-flagmark-pole" x1="230" y1="20" x2="230" y2="440" stroke-width="7" stroke-linecap="round"></line>
+					<circle class="na-flagmark-ball" cx="230" cy="18" r="9"></circle>
+				</svg>
 				<div class="na-brand-logo">
 					<img
 						src="images/flag-heroes-icon.png"

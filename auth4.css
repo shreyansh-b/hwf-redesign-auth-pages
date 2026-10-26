@@ -1,0 +1,56 @@
+/* Card-split layout: one rounded card divided into a form side (left) and brand-details side (right). Builds on auth.css tokens. */
+.nc-body {
+    background-color: var(--na-panel);
+    background-image: url('images/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+html, body { height: 100%; }
+body.nc-body {
+    height: 100vh; height: 100dvh; min-height: 0; overflow-y: auto; overflow-x: hidden;
+    scrollbar-width: thin; scrollbar-color: rgba(63, 81, 181, 0.35) transparent;
+}
+body.nc-body::-webkit-scrollbar { width: 6px; }
+body.nc-body::-webkit-scrollbar-track { background: transparent; }
+body.nc-body::-webkit-scrollbar-thumb { background-color: rgba(63, 81, 181, 0.35); border-radius: 999px; }
+body.nc-body::-webkit-scrollbar-thumb:hover { background-color: rgba(63, 81, 181, 0.55); }
+
+.nc-shell {
+    display: flex; min-height: 100vh; min-height: 100dvh;
+    align-items: center; justify-content: center;
+    padding: clamp(16px, 4vh, 48px) clamp(16px, 4vw, 32px);
+}
+
+.nc-card {
+    width: 100%; max-width: 980px; display: flex;
+    background: #fff; border-radius: 28px; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(43, 47, 74, 0.22);
+    min-height: clamp(460px, 72vh, 620px);
+}
+
+.nc-form-side {
+    flex: 1 1 54%; display: flex; flex-direction: column; justify-content: center;
+    padding: clamp(28px, 5vh, 56px) clamp(24px, 4vw, 56px);
+}
+.nc-form-side form { width: 100%; }
+
+/* Reuse the existing .na-brand brand panel, resized to fit inside the card's right half. */
+.nc-card .na-brand { flex: 1 1 46%; padding: clamp(28px, 5vh, 56px) clamp(24px, 4vw, 48px); }
+.nc-card .na-brand-logo img { width: clamp(44px, 5vw, 64px); height: clamp(44px, 5vw, 64px); padding: 10px; }
+.nc-card .na-brand-name { font-size: clamp(13px, 1.1vw, 16px); }
+.nc-card .na-brand-copy h2 { font-size: clamp(20px, 2.1vw, 28px); margin-bottom: 12px; }
+.nc-card .na-brand-copy p { font-size: clamp(12.5px, 1vw, 14px); margin-bottom: 20px; }
+.nc-card .na-points { gap: 12px; }
+.nc-card .na-points li { font-size: clamp(12.5px, 1vw, 14px); }
+.nc-card .na-points .fa { flex: 0 0 30px; width: 30px; height: 30px; line-height: 30px; font-size: 14px; border-radius: 9px; }
+.nc-card .na-brand-flagmark { width: clamp(100px, 15vw, 190px); right: 0; bottom: -6%; }
+.nc-card .na-brand-foot { font-size: 11.5px; }
+
+@media (max-width: 900px) {
+    .nc-card { flex-direction: column; min-height: 0; max-width: 460px; }
+    .nc-card .na-brand { display: none; }
+    .nc-card .na-card-brand { display: flex; margin-bottom: clamp(14px, 3vh, 24px); }
+    .nc-form-side { padding: clamp(24px, 5vh, 36px) clamp(20px, 5vw, 32px); }
+}
