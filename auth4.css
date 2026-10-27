@@ -1,11 +1,11 @@
 /* Card-split layout: one rounded card divided into a form side (left) and brand-details side (right). Builds on auth.css tokens. */
 .nc-body {
     background-color: var(--na-panel);
-    background-image: url('images/login-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url('images/login-bg-left.jpg'), url('images/login-bg-right.jpg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: auto 100%, auto 100%;
+    background-attachment: fixed, fixed;
 }
 html, body { height: 100%; }
 body.nc-body {

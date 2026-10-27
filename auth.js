@@ -43,6 +43,19 @@
         $all('.design-switch-menu.open').forEach(function (menu) { menu.classList.remove('open'); });
     });
 
+    // Scroll-to-top button
+    var scrollTopBtn = $('.scroll-top-btn');
+    if (scrollTopBtn) {
+        function toggleScrollTopBtn() {
+            scrollTopBtn.classList.toggle('show', window.scrollY > 30);
+        }
+        toggleScrollTopBtn();
+        window.addEventListener('scroll', toggleScrollTopBtn);
+        scrollTopBtn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     // Show / hide password
     $all('.na-eye').forEach(function (btn) {
         btn.addEventListener('click', function () {

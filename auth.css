@@ -299,6 +299,22 @@
     .design-switch-dropdown { top: calc(100% + 6px); }
 }
 
+.scroll-top-btn {
+    position: fixed; right: 20px; bottom: 20px; z-index: 50;
+    width: 44px; height: 44px; border-radius: 50%; border: none;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; background: var(--na-primary); cursor: pointer;
+    box-shadow: 0 6px 16px rgba(63, 81, 181, 0.35);
+    opacity: 0; visibility: hidden; transform: translateY(12px);
+    transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.15s ease;
+}
+.scroll-top-btn.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-top-btn:hover { background: #3447a5; }
+.scroll-top-btn .fa { font-size: 16px; }
+@media (max-width: 480px) {
+    .scroll-top-btn { right: 14px; bottom: 14px; width: 40px; height: 40px; }
+}
+
 .na-card-brand {
     display: none; align-items: center; gap: 12px; margin-bottom: 24px;
 }
