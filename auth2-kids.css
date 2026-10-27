@@ -10,7 +10,7 @@
     position: fixed; inset: 0;
     z-index: -1;
     background-repeat: no-repeat;
-    background-position: center 35%;
+    background-position: 20% 30%;
     background-image: linear-gradient(rgba(247, 248, 254, 0.72), rgba(247, 248, 254, 0.72)), url('images/front-home.jpg');
     background-size: cover;
     pointer-events: none;

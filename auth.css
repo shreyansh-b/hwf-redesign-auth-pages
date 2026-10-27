@@ -363,7 +363,7 @@
 /* Below md screens (< 768px) -> only login part */
 @media (max-width: 767.98px) {
     html, body { height: 100%; }
-    body.na-body:not(.nb-body) { height: 100vh; height: 100dvh; overflow-y: auto; overflow-x: hidden; }
+    body.na-body:not(.nb-body) { height: 100vh; height: 100dvh; min-height: 0; overflow-y: auto; overflow-x: hidden; }
     .na-shell { min-height: 100vh; min-height: 100dvh; }
     .na-brand { display: none !important; }
     .na-main {
