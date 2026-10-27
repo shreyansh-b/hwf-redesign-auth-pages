@@ -121,7 +121,7 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)), url('images/login-bg-left.jpg'), url('images/login-bg-right.jpg');
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: left center, left center, right center;
-    background-size: cover, 32% 100%, 32% 100%;
+    background-size: cover, auto 100%, auto 100%;
 }
 .na-card {
     width: 100%; max-width: 640px; padding: 32px;

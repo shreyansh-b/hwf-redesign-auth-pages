@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Helping With Flags - Login</title>
+    <link rel="shortcut icon" type="image/png" href="images/header-logo.png">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="auth-plain.css" rel="stylesheet">
+    <link href="auth4.css" rel="stylesheet">
+</head>
+<body class="na-body nc-body">
+    <div class="design-switch-menu">
+        <button type="button" class="design-switch-toggle" aria-haspopup="true" aria-expanded="false"><i class="fa fa-exchange" aria-hidden="true"></i><span class="design-switch-label"> Design</span></button>
+        <div class="design-switch-dropdown">
+            <a href="index.html">Centered design</a>
+            <a href="index-kids.html">Centered design (Kids)</a>
+            <a href="index-split-plain.html">Split design</a>
+            <a href="index-split.html">Split design (Kids)</a>
+            <a href="index-card-plain.html" aria-current="page">Card split design</a>
+            <a href="index-card.html">Card split design (Kids)</a>
+        </div>
+    </div>
+    <div class="nc-shell">
+        <div class="nc-card">
+            <section class="nc-form-side">
+                <div class="na-card-brand">
+                    <img src="images/flag-heroes-icon.png" alt="Helping With Flags">
+                    <span>Helping with Flags</span>
+                </div>
+                <div class="na-card-head">
+                    <div class="na-icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                    <div>
+                        <h1 class="na-title">Welcome back</h1>
+                        <p class="na-subtitle">Sign in to manage your club.</p>
+                    </div>
+                </div>
+
+                <form id="login-form" novalidate autocomplete="off">
+                    <input type="hidden" id="login_with" value="email">
+                    <div class="na-tabs" role="tablist">
+                        <button type="button" class="na-tab active" data-mode="email">Email Code</button>
+                        <button type="button" class="na-tab" data-mode="phone">Phone Code</button>
+                        <button type="button" class="na-tab" data-mode="email-pass">Email &amp; Password</button>
+                    </div>
+
+                    <div class="na-alert" role="alert"></div>
+
+                    <div class="na-field email-field">
+                        <label for="email">Email ID <span class="req">*</span></label>
+                        <input id="email" name="email" class="na-input" type="email" placeholder="Enter your email id">
+                        <div class="na-error"></div>
+                    </div>
+
+                    <div class="na-field phone-field">
+                        <label for="phone">Phone <span class="req">*</span></label>
+                        <input id="phone" name="phone" class="na-input" type="tel" placeholder="Enter your phone">
+                        <div class="na-error"></div>
+                    </div>
+
+                    <div class="na-field password-field">
+                        <label for="password">Password <span class="req">*</span></label>
+                        <div class="na-input-wrap has-toggle">
+                            <input id="password" name="password" class="na-input" type="password" placeholder="Enter your password">
+                            <button type="button" class="na-eye" aria-label="Show password"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="na-error"></div>
+                    </div>
+
+                    <p class="na-note otp-note">We will send a one-time passcode to verify it is you. No password needed.</p>
+
+                    <div class="na-row">
+                        <label class="na-check"><input type="checkbox" checked> Remember me</label>
+                        <a class="na-link forgot-password" href="forgot-password-card-plain.html">Forgot Your Password?</a>
+                    </div>
+
+                    <button id="submit-btn" type="submit" class="na-btn">
+                        <i id="submit-icon" class="fa fa-sign-in" aria-hidden="true"></i><span id="submit-label">Sign In</span>
+                    </button>
+                </form>
+
+                <div class="na-foot">
+                    <a href="#">Terms of Services</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a>
+                </div>
+            </section>
+
+            <aside class="na-brand">
+                <svg class="na-brand-flagmark" viewBox="0 0 260 460" aria-hidden="true" focusable="false">
+                    <path class="na-flagmark-cloth" d="M230,30 L65,30 L65,140 L230,140 Z"></path>
+                    <line class="na-flagmark-pole" x1="230" y1="20" x2="230" y2="440" stroke-width="7" stroke-linecap="round"></line>
+                    <circle class="na-flagmark-ball" cx="230" cy="18" r="9"></circle>
+                </svg>
+                <div class="na-brand-logo">
+                    <img src="images/flag-heroes-icon.png" alt="Helping With Flags">
+                    <span class="na-brand-name">Helping with Flags</span>
+                </div>
+                <div class="na-brand-copy">
+                    <h2>Empowering Non-Profits, Enriching Communities</h2>
+                    <p>Raise Flags, Raise Funds! Sign in to manage your club, track members, and keep campaigns moving.</p>
+                    <ul class="na-points">
+                        <li><i class="fa fa-shield" aria-hidden="true"></i> Secure, passwordless sign in</li>
+                        <li><i class="fa fa-users" aria-hidden="true"></i> Manage your club in one place</li>
+                        <li><i class="fa fa-flag" aria-hidden="true"></i> Track flag campaigns &amp; funds raised</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.inputmask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="auth-validate.js"></script>
+    <script src="auth.js" defer></script>
+</body>
+</html>

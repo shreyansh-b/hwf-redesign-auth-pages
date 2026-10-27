@@ -3,7 +3,7 @@
     'use strict';
     if (!$) { return; }
 
-    var designMatch = window.location.pathname.match(/(-split|-card)\.html$/);
+    var designMatch = window.location.pathname.match(/(-split-plain|-card-plain|-split|-card|-kids)\.html$/);
     var designSuffix = designMatch ? designMatch[1] : '';
     function pageUrl(name) { return designSuffix ? name.replace(/\.html$/, designSuffix + '.html') : name; }
 
