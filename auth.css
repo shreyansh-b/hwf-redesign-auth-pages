@@ -67,12 +67,7 @@
     background: radial-gradient(circle at 42% 38%, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02) 55%, rgba(0, 0, 0, 0.08) 100%);
     border-radius: 50%;
 }
-.na-brand-flagmark {
-    position: absolute; right: 4%; bottom: -3%;
-    width: clamp(150px, 22vw, 280px); height: auto;
-    pointer-events: none; z-index: 0;
-    overflow: visible;
-}
+.na-brand-flagmark { display: none; }
 .na-flagmark-pole { stroke: rgba(255, 255, 255, 0.16); }
 .na-flagmark-ball { fill: rgba(255, 255, 255, 0.16); }
 .na-flagmark-cloth {
