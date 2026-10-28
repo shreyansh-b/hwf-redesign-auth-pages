@@ -127,19 +127,27 @@
     color: #fff;
 }
 .na-app-list { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(8px, 1.2vh, 12px); }
-.na-app-item { display: flex; align-items: center; gap: clamp(10px, 1vw, 14px); }
+.na-app-item {
+    display: flex; align-items: center; gap: clamp(10px, 1vw, 14px);
+    text-decoration: none; color: inherit; cursor: pointer;
+    padding: 6px 8px; margin: -6px -8px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: transform 0.15s ease, opacity 0.15s ease, border-color 0.15s ease;
+}
+.na-app-item:hover, .na-app-item:focus-visible { opacity: 0.85; transform: translateX(2px); border-color: #fff; }
 .na-app-logo {
     flex: 0 0 auto;
-    width: clamp(92px, 8.6vw, 120px);
-    height: clamp(40px, 3.8vh, 49px);
+    width: clamp(122px, 11.5vw, 158px);
+    height: clamp(53px, 5vh, 64px);
     background: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     display: flex; align-items: center; justify-content: center;
     padding: 3px 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .na-app-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
-.na-app-desc { font-size: clamp(13px, 1vw, 15px); line-height: 1.35; color: rgba(255, 255, 255, 0.85); }
+.na-app-desc { font-size: clamp(16px, 1.25vw, 16px); line-height: 1.35; color: rgba(255, 255, 255, 0.85); }
 .na-app-desc strong { display: block; color: #fff; font-weight: 700; }
 
 /* Form side (70% on large and xl screens) */
@@ -376,8 +384,8 @@
     .na-brand-copy p { font-size: clamp(12.5px, 1.1vw, 14px); }
     .na-points li { font-size: clamp(12px, 1.05vw, 13.5px); }
     .na-apps-title { font-size: clamp(12px, 1.1vw, 13.5px); }
-    .na-app-logo { width: clamp(80px, 9.8vw, 102px); height: clamp(35px, 3.4vh, 42px); }
-    .na-app-desc { font-size: clamp(12.5px, 1.15vw, 14.5px); }
+    .na-app-logo { width: clamp(106px, 12.8vw, 134px); height: clamp(46px, 4.5vh, 55px); }
+    .na-app-desc { font-size: clamp(15px, 1.5vw, 18px); }
 
     .na-main {
         flex: 0 0 50%;
