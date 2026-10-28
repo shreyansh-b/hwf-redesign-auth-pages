@@ -92,10 +92,15 @@
     flex-shrink: 0;
 }
 .na-brand-name { font-size: clamp(13px, 1.1vw, 19px); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-.na-brand-copy {
+.na-brand-body {
     position: relative; z-index: 1;
-    flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center;
-    margin: clamp(14px, 2vh, 28px) 0;
+    flex: 0 1 auto; min-height: 0;
+    margin: auto 0;
+    display: flex; flex-direction: column;
+    gap: clamp(18px, 2.6vh, 32px);
+}
+.na-brand-copy {
+    min-height: 0; display: flex; flex-direction: column; justify-content: flex-start;
 }
 .na-brand-copy h2 { margin: 0 0 clamp(8px, 1.2vh, 14px); font-size: clamp(18px, 1.8vw, 30px); font-weight: 600; line-height: 1.25; color: #fff; }
 .na-brand-copy p { margin: 0 0 clamp(12px, 1.8vh, 24px); font-size: clamp(12px, 0.9vw, 14.5px); line-height: 1.5; color: rgba(255, 255, 255, 0.85); }
@@ -107,6 +112,34 @@
     flex-shrink: 0;
 }
 .na-brand-foot { position: relative; z-index: 1; flex: 0 0 auto; font-size: clamp(11px, 0.75vw, 12.5px); color: rgba(255, 255, 255, 0.7); }
+
+.na-apps {
+    position: relative; z-index: 1;
+    flex: 0 0 auto;
+    padding-top: clamp(14px, 2vh, 22px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.na-apps-title {
+    margin: 0 0 clamp(10px, 1.4vh, 16px);
+    font-size: clamp(12.5px, 0.95vw, 14.5px);
+    font-weight: 700;
+    color: #fff;
+}
+.na-app-list { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(8px, 1.2vh, 12px); }
+.na-app-item { display: flex; align-items: center; gap: clamp(10px, 1vw, 14px); }
+.na-app-logo {
+    flex: 0 0 auto;
+    width: clamp(64px, 6vw, 84px);
+    height: clamp(28px, 2.6vh, 34px);
+    background: #fff;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4px 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.na-app-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.na-app-desc { font-size: clamp(11px, 0.8vw, 12.5px); line-height: 1.35; color: rgba(255, 255, 255, 0.85); }
+.na-app-desc strong { display: block; color: #fff; font-weight: 700; }
 
 /* Form side (70% on large and xl screens) */
 .na-main {
@@ -345,6 +378,9 @@
     .na-brand-copy h2 { font-size: clamp(19px, 2vw, 25px); }
     .na-brand-copy p { font-size: clamp(12.5px, 1.1vw, 14px); }
     .na-points li { font-size: clamp(12px, 1.05vw, 13.5px); }
+    .na-apps-title { font-size: clamp(12px, 1.1vw, 13.5px); }
+    .na-app-logo { width: clamp(56px, 7vw, 72px); height: clamp(24px, 2.4vh, 30px); }
+    .na-app-desc { font-size: clamp(10.5px, 0.95vw, 12px); }
 
     .na-main {
         flex: 0 0 50%;
