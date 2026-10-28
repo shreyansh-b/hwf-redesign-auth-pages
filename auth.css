@@ -136,8 +136,8 @@
 .na-app-item:hover, .na-app-item:focus-visible { opacity: 0.85; transform: translateX(2px); border-color: #fff; }
 .na-app-logo {
     flex: 0 0 auto;
-    width: clamp(122px, 11.5vw, 158px);
-    height: clamp(53px, 5vh, 64px);
+    width: clamp(122px, 11.5vw, 170px);
+    height: clamp(55px, 5vh, 64px);
     background: #fff;
     border-radius: 16px;
     display: flex; align-items: center; justify-content: center;
@@ -145,7 +145,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 .na-app-logo img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
-.na-app-desc { font-size: clamp(16px, 1.25vw, 16px); line-height: 1.35; color: rgba(255, 255, 255, 0.85); }
+.na-app-desc { font-size: clamp(18px, 1.25vw, 16px); line-height: 1.35; color: rgba(255, 255, 255, 0.85); }
 .na-app-desc strong { display: block; color: #fff; font-weight: 700; }
 
 /* Form side (70% on large and xl screens) */
