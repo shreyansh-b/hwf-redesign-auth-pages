@@ -94,6 +94,7 @@
     flex-shrink: 0;
 }
 .na-brand-name { font-size: clamp(13px, 1.1vw, 19px); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.na-brand-logo--lockup img { width: auto; height: clamp(50px, 6vw, 86px); padding: 0; background: transparent; border-radius: 0; box-shadow: none; }
 .na-brand-body {
     position: relative; z-index: 1;
     flex: 0 1 auto; min-height: 0;
@@ -379,6 +380,7 @@
         padding: clamp(20px, 2.5vw, 36px);
     }
     .na-brand-logo img { width: clamp(44px, 4.5vw, 64px); height: clamp(44px, 4.5vw, 64px); }
+    .na-brand-logo--lockup img { width: auto; height: clamp(42px, 6vw, 68px); }
     .na-brand-name { font-size: clamp(13px, 1.3vw, 17px); }
     .na-brand-copy h2 { font-size: clamp(19px, 2vw, 25px); }
     .na-brand-copy p { font-size: clamp(12.5px, 1.1vw, 14px); }
