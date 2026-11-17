@@ -172,6 +172,7 @@
     display: flex; flex-direction: column; justify-content: center;
     box-sizing: border-box;
 }
+.na-card--compact { min-height: 0; }
 .na-icon {
     width: 52px; height: 52px; margin-bottom: 18px;
     display: flex; align-items: center; justify-content: center;
